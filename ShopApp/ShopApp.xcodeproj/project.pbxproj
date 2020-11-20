@@ -99,9 +99,7 @@
 			children = (
 				FA3BE74C25683A64007CDC5E /* App */,
 				FA3BE74D25683B1F007CDC5E /* Modules */,
-				FA3BE71C256839C3007CDC5E /* Assets.xcassets */,
-				FA3BE71E256839C3007CDC5E /* LaunchScreen.storyboard */,
-				FA3BE721256839C3007CDC5E /* Info.plist */,
+				FA3BE75825684A72007CDC5E /* SupportFiles */,
 			);
 			path = ShopApp;
 			sourceTree = "<group>";
@@ -155,6 +153,16 @@
 				FA3BE75325683F3B007CDC5E /* ProductViewController.swift */,
 			);
 			path = Product;
+			sourceTree = "<group>";
+		};
+		FA3BE75825684A72007CDC5E /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FA3BE721256839C3007CDC5E /* Info.plist */,
+				FA3BE71E256839C3007CDC5E /* LaunchScreen.storyboard */,
+				FA3BE71C256839C3007CDC5E /* Assets.xcassets */,
+			);
+			path = SupportFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,7 +466,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RF42FG352F;
-				INFOPLIST_FILE = ShopApp/Info.plist;
+				INFOPLIST_FILE = ShopApp/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -477,7 +485,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RF42FG352F;
-				INFOPLIST_FILE = ShopApp/Info.plist;
+				INFOPLIST_FILE = ShopApp/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

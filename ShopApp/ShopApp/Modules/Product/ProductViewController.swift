@@ -12,8 +12,10 @@ final class ProductViewController: UIViewController {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
+        label.textColor = .black
         label.textAlignment = .left
         label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -25,16 +27,11 @@ final class ProductViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func loadView() {
-        super.loadView()
-        setupUI()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         titleLabel.text = "View"
-        
+        setupUI()
     }
     
     private func setupUI() {
