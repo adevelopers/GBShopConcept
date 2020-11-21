@@ -1,14 +1,16 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  ShopApp
 //
-//  Created by Kirill Khudiakov on 20.11.2020.
+//  Created Kirill Khudiakov on 21.11.2020.
 //
 
 import UIKit
 
 class HomeViewController: UIViewController {
 
+    var presenter: HomeViewOutput?
+    
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Home"
@@ -32,8 +34,21 @@ class HomeViewController: UIViewController {
             titleLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -inset),
             titleLabel.heightAnchor.constraint(equalToConstant: 40)
         ])
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Выйти",
+                                                            style: .plain,
+                                                            target: self,
+                                                            action: #selector(didTapLogout))
     }
-
+    
+    @objc
+    private func didTapLogout() {
+        presenter?.logout()
+    }
 
 }
 
+
+extension HomeViewController: HomeViewInput {
+    
+}
