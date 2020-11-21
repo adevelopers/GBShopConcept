@@ -1,5 +1,5 @@
 //
-//  LoginInteractorTests.swift
+//  RegistrationInteractorTests.swift
 //  ShopApp
 //
 //  Created Kirill Khudiakov on 21.11.2020.
@@ -9,11 +9,11 @@
 import XCTest
 import SwiftyMocky
 
-@testable import ShopApp
+@testable import App
 
-final class LoginInteractorTests: XCTestCase {
+final class RegistrationInteractorTests: XCTestCase {
     
-    var interactor: LoginInteractor!
+    var interactor: RegistrationInteractor!
     
     override func setUp() {
         super.setUp()

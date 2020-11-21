@@ -9,5 +9,6 @@
 import Foundation
 
 protocol LoginRouterInput: class {
-    func openHome() 
+    func openHome()
+    func openRegistration()
 }

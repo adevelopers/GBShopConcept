@@ -7,10 +7,11 @@ target 'ShopApp' do
 
   # Pods for ShopApp
   pod 'Swinject'
+  
 
   target 'ShopAppTests' do
     inherit! :search_paths
-    # Pods for testing
+    pod 'SwiftyMocky'
   end
 
   target 'ShopAppUITests' do

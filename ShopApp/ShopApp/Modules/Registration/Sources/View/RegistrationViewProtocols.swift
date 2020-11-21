@@ -1,5 +1,5 @@
 //
-//  LoginViewProtocols.swift
+//  RegistrationViewProtocols.swift
 //  ShopApp
 //
 //  Created Kirill Khudiakov on 21.11.2020.
@@ -8,13 +8,11 @@
 
 import Foundation
 
-protocol LoginViewInput: class {
+protocol RegistrationViewInput: class {
     
 }
 
-protocol LoginViewOutput: class {
+protocol RegistrationViewOutput: class {
     
     func viewDidLoad()
-    func didTapLogin(login: String?, password: String?)
-    func didTapRegistration()
 }

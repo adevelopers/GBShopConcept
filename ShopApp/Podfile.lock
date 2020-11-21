@@ -1,16 +1,24 @@
 PODS:
+  - Sourcery (1.0.0)
+  - SwiftyMocky (4.0.1):
+    - Sourcery (>= 1.0)
   - Swinject (2.7.1)
 
 DEPENDENCIES:
+  - SwiftyMocky
   - Swinject
 
 SPEC REPOS:
   trunk:
+    - Sourcery
+    - SwiftyMocky
     - Swinject
 
 SPEC CHECKSUMS:
+  Sourcery: 928a146ea9b777fa64b0c6ce915c4128b4488cff
+  SwiftyMocky: 707d9cdd5decef8083f6dc76892977ee1cf8bbce
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: 365e205e396618ba39b0230b00c312890577fd0b
+PODFILE CHECKSUM: 0c1d41ee9e59eff454bf16a7dabc95e75742b809
 
 COCOAPODS: 1.10.0.rc.1

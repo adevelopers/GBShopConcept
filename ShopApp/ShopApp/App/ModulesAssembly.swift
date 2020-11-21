@@ -12,6 +12,7 @@ struct ModulesAssembly: Assembly {
     
     let assemblies: [Assembly] = [
         LoginAssembly(),
+        RegistrationAssembly(),
         HomeAssembly(),
         ProductAssembly()
     ]

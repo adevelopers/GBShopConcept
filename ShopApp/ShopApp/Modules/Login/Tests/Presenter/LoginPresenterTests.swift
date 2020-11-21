@@ -9,7 +9,7 @@
 import XCTest
 import SwiftyMocky
 
-@testable import App
+@testable import ShopApp
 
 final class LoginPresenterTests: XCTestCase {
     

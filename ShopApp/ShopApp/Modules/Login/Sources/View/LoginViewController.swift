@@ -16,7 +16,7 @@ final class LoginViewController: UIViewController {
         let label = UILabel()
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-        label.text = "Login"
+        label.text = "Авторизация"
         label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -51,6 +51,17 @@ final class LoginViewController: UIViewController {
         return button
     }()
     
+    private lazy var registrationButton: UIButton = {
+        let button = UIButton()
+        button.layer.cornerRadius = 15
+        button.backgroundColor = .black
+        button.setTitle("Регистрация", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.addTarget(self, action: #selector(didTapRegistration), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,6 +69,7 @@ final class LoginViewController: UIViewController {
         view.addSubview(loginField)
         view.addSubview(passwordField)
         view.addSubview(loginButton)
+        view.addSubview(registrationButton)
         
         let inset = CGFloat(16)
         NSLayoutConstraint.activate([
@@ -87,6 +99,13 @@ final class LoginViewController: UIViewController {
             loginButton.heightAnchor.constraint(equalToConstant: 40)
         ])
         
+        NSLayoutConstraint.activate([
+            registrationButton.topAnchor.constraint(equalTo:  loginButton.bottomAnchor, constant: 16),
+            registrationButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: inset),
+            registrationButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -inset),
+            registrationButton.heightAnchor.constraint(equalToConstant: 40)
+        ])
+        
         presenter?.viewDidLoad()
     }
     
@@ -94,6 +113,11 @@ final class LoginViewController: UIViewController {
     private func didTapLogin() {
         presenter?.didTapLogin(login: loginField.text,
                                password: passwordField.text)
+    }
+    
+    @objc
+    private func didTapRegistration() {
+        presenter?.didTapRegistration()
     }
 }
 

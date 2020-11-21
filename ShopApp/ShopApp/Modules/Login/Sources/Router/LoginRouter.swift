@@ -19,9 +19,16 @@ final class LoginRouter {
 }
 
 extension LoginRouter: LoginRouterInput {
+    
     func openHome() {
         let controller = HomeBuilder().build(output: .none)
         viewController?.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    func openRegistration() {
+        let controller = RegistrationBuilder().build(output: .none)
+        viewController?.navigationController?.pushViewController(controller, animated: true)
+
     }
     
 }

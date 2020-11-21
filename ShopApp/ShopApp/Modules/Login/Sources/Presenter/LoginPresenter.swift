@@ -28,12 +28,17 @@ final class LoginPresenter {
 }
 
 extension LoginPresenter: LoginViewOutput {
+    
     func viewDidLoad() {}
     
     func didTapLogin(login: String?, password: String?) {
         if let login = login, let password = password {
             interactor.login(with: login, and: password)
         }
+    }
+    
+    func didTapRegistration() {
+        router.openRegistration()
     }
     
 }
